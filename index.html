@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section>
+      <article class="information-container">
+        <ul>
+          <li>ROCK</li>
+          <li>PAPER</li>
+          <li>SCISSORS</li>
+          <li>LIZARD</li>
+          <li>SPOCK</li>
+        </ul>
+        <div class="score-container">
+          <p class="score-title">SCORE</p>
+          <span class="score">0</span>
+        </div>
+      </article>
+    </section>
+
+    <section class="game-container">
+      <div class="row first-row">
+        <button id="scissors" class="primary-button scissors">
+          <img src="/images/icon-scissors.svg" />
+        </button>
+      </div>
+      <div class="row second-row">
+        <button id="spock" class="primary-button spock">
+          <img src="/images/icon-spock.svg" />
+        </button>
+        <button id="paper" class="primary-button paper">
+          <img src="/images/icon-paper.svg" />
+        </button>
+      </div>
+      <div class="row third-row">
+        <button id="lizard" class="primary-button lizard">
+          <img src="/images/icon-lizard.svg" />
+        </button>
+        <button id="rock" class="primary-button rock">
+          <img src="/images/icon-rock.svg" />
+        </button>
+      </div>
+    </section>
+
+    <section class="results-container">
+      <div class="primary-button winner">
+        <img id="winner-img" alt="winner-img" src="/images/icon-scissors.svg" />
+      </div>
+      <div class="results-information">
+        <span id="winner-message">PLACEHOLDER</span>
+        <button id="replay" class="secondary-button">PLAY AGAIN</button>
+      </div>
+      <div class="primary-button loser">
+        <img id="loser-img" alt="loser-img" src="/images/icon-scissors.svg" />
+      </div>
+    </section>
+  </body>
+</html>
