@@ -22,8 +22,8 @@ function selectHand(hand) {
    const message = selectWinner(userHand, machineHand)
 
    document.querySelector("#winner-message").innerText = message[0];
-   document.querySelector(".winner").classList.add(message[1])
-   document.querySelector(".loser").classList.add(message[2])
+   document.querySelector(".winner").classList.toggle(message[1])
+   document.querySelector(".loser").classList.toggle(message[2])
    document.getElementById("winner-img").src=`/images/icon-${message[1]}.svg`;
    document.getElementById("loser-img").src=`/images/icon-${message[2]}.svg`;
 
@@ -36,11 +36,11 @@ function getRandomHand(){
     return options[Math.floor(Math.random() * options.length)]
 }
 
-const winner = { "scissors": ["lizard", "paper"], 
-    "rock": ["lizard", "scissors"], 
-    "paper": ["rock", "spock"], 
-    "spock": ["scissors", "rock"], 
-    "lizard": ["spock", "paper"], 
+const winner = { "scissors": ["lizard", "paper"],
+    "rock": ["lizard", "scissors"],
+    "paper": ["rock", "spock"],
+    "spock": ["scissors", "rock"],
+    "lizard": ["spock", "paper"],
 }
 
 
@@ -52,7 +52,7 @@ function selectWinner(userHand, machineHand) {
      if (result){
         return ["HA GANADO", userHand, machineHand]
      }
-    
+
      return ["HA PERDIDO", machineHand, userHand]
 }
 
